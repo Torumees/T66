@@ -1,0 +1,127 @@
+:root {
+    --dark-color: rgb(0, 11, 107);
+    --medium-color: rgba(27, 39, 148, 0.658);
+    --light-color:rgba(127, 139, 247, 0.685);
+    --text-color:rgb(106, 189, 228);
+}
+
+*root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 2rem;
+    color:var(--text-color);
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to top, var(--dark-color), var(--light-color));
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 44%, 0% 100%);
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.3rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(-50px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn {
+    max-width: 114rem;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--dark-color);
+    padding: 2rem;
+    color: burlywood;
+}
+
+.icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: burlywood;
+    font-size: 1.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.icons a:hover {
+    background-color: var(--light-color);
+    border-radius: 50%;
+}
+
+.main {
+    background-color: var(--light-color);
+    margin-top: -11rem;
+    height: 10vh;
+    padding: 12rem 2rem 3rem 2rem;
+}
